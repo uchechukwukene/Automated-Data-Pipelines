@@ -50,20 +50,21 @@ This project implements an **automated financial data pipeline** aimed at enhanc
 
 ### Installation Steps
 
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/yourusername/financial-forecasting-pipeline.git
-   cd financial-forecasting-pipeline
-   
-2. Install Python dependencies:
+```bash
+# Clone the repository
+git clone https://github.com/yourusername/financial-forecasting-pipeline.git
+cd financial-forecasting-pipeline
+
+# Install Python dependencies
 pip install -r requirements.txt
 
-3. Configure Airflow:
+# Configure Airflow
 airflow db init
 airflow users create --username admin --password admin --firstname Admin --lastname Admin --role Admin --email admin@example.com
 airflow webserver --port 8080
 
-4. Set up DBT profiles for PostgreSQL and S3 integration. Update the profiles.yml file:
+# Set up DBT profiles for PostgreSQL and S3 integration
+echo "
 default:
   outputs:
     dev:
@@ -73,13 +74,18 @@ default:
       password: yourpassword
       dbname: financial_db
       schema: public
+" > ~/.dbt/profiles.yml
 
-5. Add your NetSuite API credentials in .env or a secure storage solution.
+# Add your NetSuite API credentials in .env or a secure storage solution (ensure to create your .env file)
+echo "
+NETSUITE_API_KEY=your_api_key
+NETSUITE_API_SECRET=your_api_secret
+" > .env
 
-6. Run Airflow DAGs:
+# Run Airflow DAGs
 airflow dags trigger financial_data_pipeline
 
-  ```
+
 Workflow
 Step 1: Airflow triggers data extraction from NetSuite via API.
 Step 2: Raw data is uploaded to AWS S3.
