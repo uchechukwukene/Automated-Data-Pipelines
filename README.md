@@ -86,14 +86,14 @@ NETSUITE_API_SECRET=your_api_secret
 airflow dags trigger financial_data_pipeline
 
 ```
-###Workflow
+### Workflow
 Step 1: Airflow triggers data extraction from NetSuite via API.
 Step 2: Raw data is uploaded to AWS S3.
 Step 3: DBT processes and transforms raw data, ensuring it adheres to business rules.
 Step 4: Transformed data is stored in PostgreSQL for reporting and analysis.
 Step 5: Airflow monitors the process and alerts on any failures or issues.
 
-###Conclusion
+### Conclusion
 This project demonstrates an end-to-end solution for automating financial forecasting and reporting. It showcases expertise in modern data stack technologies such as Airflow, DBT, PostgreSQL, and AWS. The pipeline’s design is scalable, efficient, and optimized for financial analysis—positioning it as a powerful asset for businesses seeking real-time insights.
 
 
