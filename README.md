@@ -99,6 +99,3 @@ airflow dags trigger financial_data_pipeline
 This project demonstrates an end-to-end solution for automating financial forecasting and reporting. It showcases expertise in modern data stack technologies such as Airflow, DBT, PostgreSQL, and AWS. The pipeline’s design is scalable, efficient, and optimized for financial analysis—positioning it as a powerful asset for businesses seeking real-time insights.
 
 
-This version includes all necessary formatting, making it easy to read on GitHub while showcasing the technical skills for full-stack quant data science roles.
-
-
