@@ -85,7 +85,7 @@ NETSUITE_API_SECRET=your_api_secret
 # Run Airflow DAGs
 airflow dags trigger financial_data_pipeline
 
-
+```
 Workflow
 Step 1: Airflow triggers data extraction from NetSuite via API.
 Step 2: Raw data is uploaded to AWS S3.
